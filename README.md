@@ -16,7 +16,8 @@
 - **Structure**
 Data download from source, do simple reformat and load to PostgreSQL.
 Set up Looker Studio to connect and pull latest data from PostgreSQL for visualizing data
-![[Blank diagram.png]]
+<img width="857" alt="image" src="https://github.com/tuannnh/table_check_take_home_project/assets/51945324/56c489f4-5d54-41c9-bc7f-1d7f0c2e965b">
+
 <a id="resources"></a>
 - **Resources**
   - **Database:** PostgreSQL 14
@@ -183,7 +184,8 @@ extract_data >> transform_data >> load_data
 ### Dashboard and Reports
 
 - Connect PostgreSQL to Looker Studio for reporting with data refreshing
-![[Pasted image 20230610150819.png]]
+<img width="1205" alt="image" src="https://github.com/tuannnh/table_check_take_home_project/assets/51945324/987ea248-0412-4de4-ac1c-29e8c248b9b4">
+
 - **Dashboard Live:**<https://lookerstudio.google.com/reporting/f5c5b497-3df7-4a1f-98be-25f2ba7fcc86>
 <a id="additional_question_and_solution"></a>
 
@@ -194,10 +196,11 @@ extract_data >> transform_data >> load_data
 - **How would you build this differently if the data was being streamed from Kafka?**
   - There are **three** solutions can be considered to build up the system when data was being streamed from Kafka.
     - **Method 1:** In situations where the data involves straightforward transformations and is relatively small in size and task. This involves performing the data transformation during the ingestion process and delivering it to a database, such as PostgreSQL, with a modified structure and schema. Subsequently, the transformed data can be seamlessly pushed to a visualization tool for further analysis and interpretation.
-  ![[TableCheck (2).png]]
+  <img width="1001" alt="image" src="https://github.com/tuannnh/table_check_take_home_project/assets/51945324/1407a3f6-8f9e-4b76-8fa0-fb71a7aa8d9d">
   
     - **Method 2:** To ensure scalability as the data volume increases, it is worth considering the storage of raw Kafka data in object storage like Amazon S3. Subsequently, the data can be processed either in batches or streams (e.g., using SparkStreaming) based on specific requirement use cases.
-  ![[TableCheck.png]]
+  <img width="1021" alt="image" src="https://github.com/tuannnh/table_check_take_home_project/assets/51945324/b5dc43d1-e649-483e-a1b5-ce4ac544a98a">
+  
  <a id="q2"></a>
 - **How would you improve the deployment of this system?**
   - To enhance the deployment of this system there are several areas I am considering some areas:
